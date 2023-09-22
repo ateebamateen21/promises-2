@@ -43,7 +43,7 @@ Wada_e_wafa("false").then((a) => {
 }).catch((b) => {
     console.log(b);
     return "I am returned by catch"
-}).catch((r) => { console.log(r) }) //This second catch is useless.
+}).finally(()=>console.log("Finally the promise finished")) //This second catch is useless.
 
 
 

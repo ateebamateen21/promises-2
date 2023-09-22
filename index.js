@@ -37,7 +37,8 @@ Wada_e_wafa("false").then(function (a) {
 }).catch(function (b) {
     console.log(b);
     return "I am returned by catch";
-}).catch(function (r) { console.log(r); });
+}).finally(function () { return console.log("Finally the promise finished"); }); //This second catch is useless.
+//the succeeding then() blocks will run provided the condition that the preceding then() block runs. However, catch() block is only one and only one catch block is run on rejection of promise.
 /*function (parameter){
     //function body
 }*/
